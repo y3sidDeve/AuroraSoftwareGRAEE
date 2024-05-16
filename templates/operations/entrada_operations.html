@@ -1,0 +1,13 @@
+{% extends 'base/estructura.html' %}
+
+{% block title %}Inicio Operaciones | Aurora software{% endblock %}
+
+{% block content %}
+
+<h1>
+    Bienvenido a el Area de {{group_name}}
+</h1>
+<a class="col-6" href="{% url 'logout' %}">Cerrar sesión</a>
+
+
+{% endblock %}

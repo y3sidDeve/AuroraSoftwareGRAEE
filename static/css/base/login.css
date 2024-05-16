@@ -1,0 +1,32 @@
+.gradient-custom-2 {
+    background: rgb(34, 152, 165);
+    background: linear-gradient(90deg, rgba(34, 152, 165, 1) 30%, rgba(36, 195, 118, 1) 84%);
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+}
+
+.user-group {
+    margin-bottom: 2vh;
+}
+
+
+.img-logo {
+    width: 200px ;
+    color: aquamarine;
+}
+
+.titulo {
+    color: rgb(2, 7, 24);
+    font-size: 2em;
+}

@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Home | Aurora software{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">Welcome to Aurora software</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center">What do you want to do?</h2>
+        </div>
+        <a class="col-6" href="{% url 'custom_login' %}">Iniciar sesión</a>
+
+    </div>
+
+</div>
+{% endblock %}

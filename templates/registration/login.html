@@ -1,0 +1,80 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Login | Aurora software{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/base/login.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+                <div class="card rounded-5 text-black">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="card-body p-md-5 mx-md-4">
+
+                                <div class="text-center">
+
+                                    <h2 class="titulo mt-1 mb-5 pb-1">Bienvenido a Aurora</h2>
+                                </div>
+
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <p>Por favor ingresa con tu cuenta Corporativa.</p>
+
+                                    <div class="form-floating user-group">
+                                        <input type="text" class="form-control" name="username" id="floatingInput"
+                                            placeholder="name@example.com">
+                                        <label for="floatingInput">Usuario</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" name="password"
+                                            id="floatingPassword" placeholder="Password">
+                                        <label for="floatingPassword">Contraseña</label>
+                                    </div>
+
+                                    <div class="form-check text-start my-3">
+                                        {% if form.errors %}
+                                        <p class="alert alert-danger">
+                                            Su nombre de usuario y contraseña no coinciden. Por favor
+                                            intenta de nuevo.</p>
+                                        {% endif %}
+                                    </div>
+                                    <button style="color: aliceblue; font-weight: 700;"
+                                        class="btn gradient-custom-2 w-100 py-2" type="submit">Sign in</button>
+                                    <p class="mt-5 mb-3 text-body-secondary">&copy; Copyright</p>
+                                    <p>Al hacer clic en el botón Iniciar sesión, comprende y acepta los <a
+                                            href="#">Terminos de uso de Aurora Software</a> y la
+                                        <a href="#">Politica de Privacidad de Aurora Software.</a>
+                                    </p>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="rounded-5 col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                <div class="container mb-5">
+                                    <div class="row">
+                                        <div class="col-6 offset-3">
+                                            <img class="img-logo" src="{% static 'img/aurora_horizon_white.svg' %}" alt="logo_aurora">
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="mb-4">¿Que es Aurora?</h4>
+                                <p class="mb-2">Nuestro software brinda el acompañamiento a Pcshek SAS en la gestion documental y de información de los procesos de la compañía.
+                                </p>
+                                <p>Esta solución es el resultado de la necesidad de gestionar de manera eficiente y efectiva los
+                                    residuos de aparatos eléctricos y electrónicos (RAEE) conforme a las políticas establecidas en la certificación R2v3. </p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

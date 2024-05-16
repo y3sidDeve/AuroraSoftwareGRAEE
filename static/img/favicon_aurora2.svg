@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 4.2333334 4.2333333"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1">
+      <stop
+         style="stop-color:#65ceaf;stop-opacity:1;"
+         offset="0.36580521"
+         id="stop1" />
+      <stop
+         style="stop-color:#3291d6;stop-opacity:1;"
+         offset="0.66998011"
+         id="stop2" />
+      <stop
+         style="stop-color:#894bda;stop-opacity:1;"
+         offset="0.89264417"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="0.0079486929"
+       y1="5.1078119"
+       x2="7.050416"
+       y2="5.1078119"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.50017946,0,0,0.50017945,-7.7276267e-4,-0.01565087)" />
+  </defs>
+  <g
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.508px;font-family:'Simple Farmhouse';-inkscape-font-specification:'Simple Farmhouse';fill:url(#linearGradient2);stroke-width:0.875669"
+       x="-0.05839017"
+       y="5.0461602"
+       id="text1"
+       transform="scale(1.2004928,0.83299127)"><tspan
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Simple Farmhouse';-inkscape-font-specification:'Simple Farmhouse';fill:url(#linearGradient2);fill-opacity:1;stroke-width:0.875669"
+         x="-0.05839017"
+         y="5.0461602">A</tspan></text>
+  </g>
+</svg>

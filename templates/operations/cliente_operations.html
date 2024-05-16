@@ -1,0 +1,306 @@
+{% extends 'base/estructura.html' %}
+
+{% block title %}Clientes Operaciones | Aurora software{% endblock %}
+
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/operations/cliente_operations.css' %}">
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{% static 'js/operations/cliente_operations.js' %}"></script>
+{% endblock %}
+
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+            <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90" style="color: aliceblue;"></i>
+        </button>
+
+        <!-- Codigo que define la NAVBAR dependiendo de la url en que se encuentre -->
+
+        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Page</a>
+                </li>
+                <li class="nav-item">
+
+                    <!-- Button trigger modal -->
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link" href="#">
+                        <i class="fa-solid fa-circle-plus" style="color: rgb(5, 175, 104);"></i>
+                        Crear cliente
+                    </a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog  modal-lg">
+                            <!-- Add the 'modal-lg' class to make the modal wider -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar cliente</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body"> <!-- agregar contenido del modal   -->
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5>Ingresa los datos del cliente:</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault">
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault"> ¿Es
+                                                        una empresa?</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" id="tipoClienteRow">
+                                            <div class="col-12">
+                                                <p id="tipoClienteTexto">
+                                                    Persona
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <form id="form_persona" method="post" action="{% url 'crear_cliente' %}"
+                                                class="form formulario-cliente">
+                                                {% csrf_token %}
+                                                <div class="container-fluid">
+                                                    <input type="hidden" name="tipo_empresa" value="false">
+                                                    <div class="row">
+                                                        <div class="form-group mb-2 col-lg-6 col-sm-12">
+                                                            <label for="nombre">Nombre:</label>
+                                                            <i class="fa-solid fa-asterisk fa-2xs"
+                                                                style="color: #b11b1b;"></i>
+                                                            <input placeholder="Nombre del cliente" type="text"
+                                                                class="form-control" name="nombre" required>
+                                                        </div>
+
+                                                        <div class="form-group mb-2 col-lg-6 col-sm-12">
+                                                            <label for="apellido">Apellido:</label>
+                                                            <i class="fa-solid fa-asterisk fa-2xs"
+                                                                style="color: #b11b1b;"></i>
+                                                            <input placeholder="Apellido del cliente" type="text"
+                                                                class="form-control" name="apellido" required>
+                                                        </div>
+
+                                                        <div class="form-group mb-2 col-lg-6 col-sm-12">
+                                                            <label for="cedula">Identificación</label>
+                                                            <i class="fa-solid fa-asterisk fa-2xs"
+                                                                style="color: #b11b1b;"></i>
+                                                            <input placeholder="CC del cliente" type="text"
+                                                                class="form-control" name="id_cliente" required>
+                                                        </div>
+
+                                                        <div class="mb-2 col-lg-6 col-sm-12 form-group">
+                                                            <label for="telefono">Teléfono:
+                                                            </label>
+                                                            <input placeholder="Teléfono del cliente" type="number"
+                                                                class="form-control" name="telefono">
+                                                        </div>
+
+                                                        <div class="mb-2 col-lg-6 col-sm-12 form-group">
+                                                            <label class="required" for="telefono">Email:
+                                                            </label>
+                                                            <input placeholder="Email" type="text" class="form-control"
+                                                                name="email">
+                                                        </div>
+
+                                                        <div class="mb-2 col-lg-6 col-sm-12 form-group">
+                                                            <label for="direccion">Dirección:
+                                                            </label>
+                                                            <input placeholder="Dirección del cliente" type="text"
+                                                                class="form-control" name="direccion">
+                                                        </div>
+
+
+                                                        <button type="submit" class="col-sm-12 mt-2 btn btn-success">
+                                                            Crear
+                                                            <i class="fa-solid fa-circle-plus"></i>
+                                                        </button>
+
+                                                    </div>
+                                                </div>
+                                            </form>
+
+
+                                            <!-- Formulario empresa -->
+                                            <form id="form_empresa" style="display: none;" method="post"
+                                                action="{% url 'crear_cliente' %}" class="form formulario-cliente">
+                                                {% csrf_token %}
+                                                <div class="container-fluid">
+                                                    <input type="hidden" name="tipo_empresa" value="true">
+                                                    <div class="row">
+                                                        <div class="form-group mb-1 col-sm-12 col-lg-6">
+                                                            <label for="nombre">Nombre de la empresa:</label>
+                                                            <i class="fa-solid fa-asterisk fa-2xs"
+                                                                style="color: #b11b1b;"></i>
+                                                            <input placeholder="Nombre del cliente" type="text"
+                                                                class="form-control" name="nombre_empresa">
+                                                        </div>
+
+                                                        <div class="col-sm-12 mb-1 col-lg-6 form-group">
+                                                            <label for="cedula">NIT:</label>
+                                                            <i class="fa-solid fa-asterisk fa-2xs"
+                                                                style="color: #b11b1b;"></i>
+                                                            <input placeholder="NIT" type="text" class="form-control"
+                                                                name="id_cliente" required>
+                                                        </div>
+
+                                                        <div class="col-sm-12 mb-1 col-lg-6 form-group">
+                                                            <label for="telefono">Teléfono</label>
+                                                            <input placeholder="Teléfono del cliente" type="text"
+                                                                class="form-control" name="telefono" required>
+                                                        </div>
+
+                                                        <div class="col-sm-12 mb-1 col-lg-6 form-group">
+                                                            <label class="required" for="telefono">Email
+                                                            </label>
+                                                            <input placeholder="Email" type="text" class="form-control"
+                                                                name="email">
+                                                        </div>
+
+                                                        <div class="col-sm-12 mb-1 col-lg-12 form-group">
+                                                            <label for="direccion">Dirección
+                                                            </label>
+                                                            <input placeholder="Dirección de la empresa" type="text"
+                                                                class="form-control" name="direccion">
+                                                        </div>
+
+                                                        <div class="form-group mb-1 col-lg-6 col-sm-12">
+                                                            <label for="nombre">Nombre del representante:</label>
+                                                            <input placeholder="apellido (opcional)" type="text"
+                                                                class="form-control" name="nombre">
+                                                        </div>
+
+                                                        <div class="form-group mb-2 col-lg-6 col-sm-12">
+                                                            <label for="apellido">Apellido del
+                                                                representante:</label>
+                                                            <input placeholder="nombre (opcional)" type="text"
+                                                                class="form-control" name="apellido">
+                                                        </div>
+                                                        <button type="submit" class="col-sm-12 mt-2 btn btn-success">
+                                                            <a>Crear</a>
+                                                            <i class="fa-solid fa-circle-plus"> </i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchTable">
+        <label class="form-check-label" for="flexSwitchTable">Personas / Empresas</label>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <table id="tabla_persona" class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                        <th>Dirección</th>
+                        <th>Fecha de Creación</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cliente in clientes %}
+                    {% if cliente.tipo_empresa == False %}
+                    <tr>
+                        <td>{{ cliente.id_cliente }}</td>
+                        <td>{{ cliente.nombre }}</td>
+                        <td>{{ cliente.apellido }}</td>
+                        <td>{{ cliente.telefono }}</td>
+                        <td>{{ cliente.email }}</td>
+                        <td>{{ cliente.direccion }}</td>
+                        <td>{{ cliente.fecha_creacion }}</td>
+                        <th>
+                            <button class="btn btn-info" style="color: aliceblue;">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </th>
+                        <th>
+                            <div class="text-center">
+                                <button class="btn btn-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </th>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <table style="display: none;" id="tabla_empresa" class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre empresa</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                        <th>Dirección</th>
+                        <th>Fecha de Creación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cliente in clientes %}
+                    {% if cliente.tipo_empresa %}
+                    <tr>
+                        <td>{{ cliente.id_cliente }}</td>
+                        <td>{{ cliente.nombre_empresa }}</td>
+                        <td>{{ cliente.telefono }}</td>
+                        <td>{{ cliente.email }}</td>
+                        <td>{{ cliente.direccion }}</td>
+                        <td>{{ cliente.fecha_creacion }}</td>
+                    </tr>
+                    {% endif %}
+
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

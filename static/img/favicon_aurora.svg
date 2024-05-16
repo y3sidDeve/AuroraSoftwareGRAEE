@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666668 8.4666666"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="favicon auro.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="23.176431"
+     inkscape:cx="21.379478"
+     inkscape:cy="16.201804"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#65ceaf;stop-opacity:1;"
+         offset="0.36580521"
+         id="stop1" />
+      <stop
+         style="stop-color:#3291d6;stop-opacity:1;"
+         offset="0.66998011"
+         id="stop2" />
+      <stop
+         style="stop-color:#894bda;stop-opacity:1;"
+         offset="0.89264417"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="0.0079486928"
+       y1="5.1078121"
+       x2="7.0504158"
+       y2="5.1078121"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.0083px;font-family:'Simple Farmhouse';-inkscape-font-specification:'Simple Farmhouse';fill:url(#linearGradient2);stroke-width:1.75071;fill-opacity:1"
+       x="-0.1151935"
+       y="10.119989"
+       id="text1"
+       transform="scale(1.2018638,0.83204107)"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Simple Farmhouse';-inkscape-font-specification:'Simple Farmhouse';stroke-width:1.75071;fill:url(#linearGradient2);fill-opacity:1"
+         x="-0.1151935"
+         y="10.119989">A</tspan></text>
+  </g>
+</svg>
